@@ -14,13 +14,10 @@ module.exports = {
       },
       backgroundImage: {
         'violetpattern': "url('./images/bg-shorten-desktop.svg')",
-      }  
+      }, 
     },
   },
   plugins: [
-    function ({ addVariant }) {
-      addVariant('child', '& > *');
-      addVariant('child-hover', '& > *:hover');
-  }
+
   ],
 }

@@ -17,14 +17,16 @@ function Advanced() {
   return (
     <>
     <div className="bg-mybggray p-4 h-fit">
-      <h1 className="text-3xl font-bold">Advanced Statistics</h1>
+      <h1 className="mt-32 text-3xl font-bold">Advanced Statistics</h1>
       <p className="mt-5 font-thin text-gray-500">Track how your links are performing across the web with our advanced statistics dashboard.</p>
 
-      <IconExplain icon={icon1} title={title1} explain={explain1}/>
-
-      <IconExplain icon={icon2} title={title2} explain={explain2}/>
-      <IconExplain icon={icon3} title={title3} explain={explain3}/>
-
+      <div className="md:relative md:flex">
+        <div className="md:absolute md:left-1/4 md:top-1/2 md:block md:h-2 md:w-1/2 md:bg-mymint hidden"></div>
+        
+      <div className=""><IconExplain icon={icon1} title={title1} explain={explain1}/></div>
+      <div className="md:mt-16"><IconExplain icon={icon2} title={title2} explain={explain2}/></div>
+      <div className="md:mt-32"><IconExplain icon={icon3} title={title3} explain={explain3}/></div>
+      </div>
     </div>
 
     <div className="relative py-12 px-5 bg-myviolet bg-violetpattern bg-cover">
@@ -37,7 +39,7 @@ function Advanced() {
 
 function IconExplain(props){
   return(
-  <div className="relative mt-20 ">
+  <div className="relative mt-20">
     <div className="absolute top-[-42px] inset-x-0 h-fit w-fit p-5 m-auto rounded-full bg-myviolet"><img src={props.icon}></img></div>
     <div className="m-5 p-5 rounded-xl bg-white">
       <h2 className="font-bold text-2xl mt-14">{props.title}</h2>
